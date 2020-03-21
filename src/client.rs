@@ -61,7 +61,7 @@ impl ClientConnection {
 
         ClientConnection {
             source: source,
-            sink: SequentialWriterBuilder::new(BufWriter::with_capacity(1024, write_socket)),
+            sink: SequentialWriterBuilder::new(BufWriter::with_capacity(0, write_socket)),
             remote_addr: remote_addr,
             next_header_source: first_header,
             no_more_requests: false,
