@@ -15,7 +15,7 @@ ssl = ["openssl"]
 
 [dependencies]
 ascii = "1.0"
-chunked_transfer = "0.3"
+chunked_transfer = { git = "https://github.com/wngr/rust-chunked-transfer", rev = "9667a59c892a3a8906f05f0095db1f98dd2333dc" }
 openssl = { version = "0.10", optional = true }
 url = "1.7"
 chrono = "0.4"

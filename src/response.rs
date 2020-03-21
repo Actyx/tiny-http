@@ -358,7 +358,7 @@ impl<R> Response<R> where R: Read {
                 Some(TransferEncoding::Chunked) => {
                     use chunked_transfer::Encoder;
 
-                    let mut writer = Encoder::new(writer);
+                    let mut writer = Encoder::with_flush_after_write(writer);
                     try!(io::copy(&mut reader, &mut writer));
                 },
 
